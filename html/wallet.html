@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Wallet</title>
+  <link rel="stylesheet" href="/public/css file/wallet.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Wallet Dashboard -->
+  <div class="wallet-container">
+    <header class="wallet-header">
+      <h1>User Wallet</h1>
+      <p>Manage your coins and transactions efficiently!</p>
+    </header>
+
+    <!-- Balance Overview -->
+    <section class="balance-overview">
+      <h2>Balance Overview</h2>
+      <div class="balance-details">
+        <div>
+          <h3>Total Coins:</h3>
+          <p><span id="total-coins">0</span></p>
+        </div>
+        <div>
+          <h3>Dollar Value:</h3>
+          <p><span id="dollar-value">$0.00</span></p>
+        </div>
+        <div>
+          <h3>Other Currencies:</h3>
+          <select id="currency-selector">
+            <option value="USD" selected>USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+          </select>
+          <p id="converted-currency">$0.00</p>
+        </div>
+      </div>
+      <p class="conversion-rate">Conversion Rate: <strong>3000 Coins = $0.4</strong></p>
+    </section>
+
+    <!-- Wallet Actions -->
+    <section class="wallet-actions">
+      <h2>Wallet Actions</h2>
+
+      <!-- Transfer Coins -->
+      <div class="action-section">
+        <h3>Transfer Coins</h3>
+        <input type="email" id="recipient-email" placeholder="Recipient's Email" required>
+        <input type="number" id="transfer-amount" placeholder="Amount of Coins" required>
+        <input type="datetime-local" id="scheduled-time" placeholder="Schedule Transfer (Optional)">
+        <button id="transfer-btn">Transfer</button>
+        <p id="transfer-status"></p>
+      </div>
+
+      <!-- Withdraw Money -->
+      <div class="action-section">
+        <h3>Request Withdrawal</h3>
+        <input type="text" id="account-name" placeholder="Account Holder Name" required>
+        <input type="text" id="account-number" placeholder="Account Number" required>
+        <input type="text" id="bank-name" placeholder="Bank Name" required>
+        <input type="number" id="withdraw-amount" placeholder="Coins to Withdraw" required>
+        <button id="withdraw-btn">Submit Withdrawal</button>
+        <p id="withdraw-status"></p>
+      </div>
+
+      <!-- Auto Exchange Option -->
+      <div class="action-section">
+        <h3>Auto Exchange</h3>
+        <label>
+          <input type="checkbox" id="auto-exchange-toggle"> Automatically Exchange Coins to Dollars
+        </label>
+        <p>Note: This will deduct 5% as an exchange fee.</p>
+      </div>
+    </section>
+
+    <!-- Transaction History -->
+    <section class="transaction-history">
+      <h2>Transaction History</h2>
+      <div class="filter-section">
+        <label for="filter-type">Filter by Type:</label>
+        <select id="filter-type">
+          <option value="all">All</option>
+          <option value="withdrawal">Withdrawals</option>
+          <option value="transfer">Transfers</option>
+        </select>
+        <label for="filter-date">Filter by Date:</label>
+        <input type="date" id="filter-date">
+        <button id="apply-filter-btn">Apply Filter</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody id="transaction-list">
+          <!-- Transactions will be dynamically loaded -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Wallet Growth Chart -->
+    <section class="wallet-growth">
+      <h2>Wallet Growth</h2>
+      <canvas id="wallet-growth-chart" width="400" height="200"></canvas>
+    </section>
+
+    <!-- Earning Stats -->
+    <section class="earning-stats">
+      <h2>Earning Statistics</h2>
+      <canvas id="earnings-chart" width="400" height="200"></canvas>
+    </section>
+  </div>
+
+  <footer class="wallet-footer">
+    <p>&copy; 2025 T-Coins. All Rights Reserved.</p>
+  </footer>
+
+  <script type="module" src="/public/js_file/wallet.js"></script>
+</body>
+</html>

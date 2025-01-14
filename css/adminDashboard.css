@@ -1,0 +1,107 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #1a1a1a, #121212);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Admin Dashboard Container */
+.admin-dashboard {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header Styles */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: #4caf50;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Statistics Section */
+.stats-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+.stats-section li {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+table th {
+  background-color: #4caf50;
+  color: white;
+}
+
+table td {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+/* Buttons */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #81c784;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}

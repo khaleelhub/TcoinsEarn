@@ -1,0 +1,178 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000, #3d3d3d);
+  color: #ffffff;
+  overflow: hidden; /* Prevent scrolling */
+  animation: fade-in 1.5s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Authentication Container */
+#auth {
+  background: rgba(255, 255, 255, 0.507);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  color: #333;
+  text-align: center;
+  animation: slide-in 0.8s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Header */
+h2 {
+  margin: 0 0 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.527);
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f8f9fa;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4caf50;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button[disabled] {
+  background: #9e9e9e;
+  cursor: not-allowed;
+}
+
+/* Toggle Forms */
+#signup-form, #login-form {
+  display: none;
+}
+
+#signup-form.active, #login-form.active {
+  display: block;
+  animation: fade-in 0.5s ease;
+}
+
+/* Links */
+a {
+  display: block;
+  margin: 15px 0;
+  font-size: 0.95rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.527);
+}
+
+a:hover {
+  color: #4e4e4e;
+  text-decoration: underline;
+}
+
+/* Admin Section */
+.adm {
+  background: rgba(0, 0, 0, 0.192);
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.adm:hover {
+  background: #00000056;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  body {
+    padding: 20px;
+  }
+
+  #auth {
+    width: 100%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smooth Animations */
+.active {
+  display: none;
+  animation: fade-in 0.5s ease-in-out;
+}

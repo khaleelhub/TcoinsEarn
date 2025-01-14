@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/public/css/adminDashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Admin Dashboard Container -->
+  <div class="admin-dashboard">
+    <header class="dashboard-header">
+      <h1>Admin Dashboard</h1>
+      <p>Manage users, transactions, ads, and more efficiently!</p>
+    </header>
+
+    <!-- Platform Statistics Section -->
+    <section class="stats-section">
+      <h2>Platform Statistics</h2>
+      <ul>
+        <li>Total Users: <span id="total-users">0</span></li>
+        <li>Total Coins Distributed: <span id="total-coins-distributed">0</span></li>
+        <li>Dollar Value of Coins: <span id="coins-to-dollars">$0.00</span></li>
+        <li>Active Ads: <span id="active-ads">0</span></li>
+        <li>Total Earnings: <span id="total-earnings">$0.00</span></li>
+      </ul>
+    </section>
+
+    <!-- User Management Section -->
+    <section class="user-management">
+      <h2>User Management</h2>
+      <table id="users-table">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Coins</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- User rows dynamically loaded -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Withdrawal Requests Section -->
+    <section class="withdrawal-requests">
+      <h2>Withdrawal Requests</h2>
+      <table id="withdrawals-table">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Amount</th>
+            <th>Account Details</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Withdrawal requests dynamically loaded -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Ad Management Section -->
+    <section class="ad-management">
+      <h2>Ad Management</h2>
+      <form id="add-ad-form">
+        <input type="text" id="ad-name" placeholder="Ad Name" required>
+        <select id="ad-type" required>
+          <option value="text">Text</option>
+          <option value="image">Image</option>
+          <option value="video">Video</option>
+        </select>
+        <input type="url" id="ad-url" placeholder="Ad URL" required>
+        <button type="submit">Add Ad</button>
+      </form>
+      <ul id="ads-list">
+        <!-- Ad items dynamically loaded -->
+      </ul>
+    </section>
+
+    <!-- Audit Logs Section -->
+    <section class="audit-logs">
+      <h2>Audit Logs</h2>
+      <ul id="audit-log-list">
+        <!-- Audit logs dynamically loaded -->
+      </ul>
+    </section>
+
+    <!-- Notification Center -->
+    <section class="notifications">
+      <h2>Notification Center</h2>
+      <ul id="notification-list">
+        <!-- Notifications dynamically loaded -->
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+      <p>&copy; 2025 T-Coins. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script type="module" src="/public/js/adminDashboard.js"></script>
+</body>
+</html>

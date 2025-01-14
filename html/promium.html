@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Server</title>
+  <link rel="stylesheet" href="/public/css file/premium.css">
+</head>
+<body>
+  <div class="premium-container">
+    <!-- Header -->
+    <header>
+      <h1>Premium Features</h1>
+      <p>Unlock exclusive benefits and earn more with T-Coins!</p>
+      <div id="live-coin-rate">Current Rate: <span id="coin-rate">3000 Coins = $0.40</span></div>
+    </header>
+
+    <!-- Wallet Summary -->
+    <section class="wallet-summary">
+      <h2>Your Wallet</h2>
+      <p>Total Coins: <span id="total-coins">0</span></p>
+      <p>Referral Bonus: <span id="referral-bonus">0</span> Coins</p>
+    </section>
+
+    <!-- Coin Purchase Section -->
+    <section class="coin-purchase">
+      <h2>Buy Coins</h2>
+      <div class="coin-package" id="coins-100">
+        <h3>100 Coins</h3>
+        <p>$0.99</p>
+        <button class="buy-coins-btn" data-coins="100">Buy Now</button>
+      </div>
+      <div class="coin-package" id="coins-500">
+        <h3>500 Coins</h3>
+        <p>$4.99</p>
+        <button class="buy-coins-btn" data-coins="500">Buy Now</button>
+      </div>
+      <div class="coin-package" id="coins-10000">
+        <h3>10,000 Coins</h3>
+        <p>$99.99</p>
+        <button class="buy-coins-btn" data-coins="10000">Buy Now</button>
+      </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div id="purchase-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Confirm Your Purchase</h2>
+        <p id="purchase-item">Loading...</p>
+        <h3>Select Payment Method:</h3>
+        <select id="payment-method">
+          <option value="bank">Bank Transfer</option>
+          <option value="paypal">PayPal</option>
+          <option value="card">Credit Card</option>
+        </select>
+        <div id="bank-details" class="payment-details">
+          <h3>Transfer to:</h3>
+          <ul>
+            <li><strong>Account Number:</strong> 822913936</li>
+            <li><strong>Account Name:</strong> Opay Wallet</li>
+            <li><strong>Bank:</strong> Opay</li>
+          </ul>
+        </div>
+        <p>Transaction ID: <span id="transaction-id"></span></p>
+        <button id="confirm-purchase-btn">Confirm Payment</button>
+        <button id="cancel-purchase-btn">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Coin Calculator -->
+    <section class="coin-calculator">
+      <h2>Coin Calculator</h2>
+      <p>Enter coins to calculate cost:</p>
+      <input type="number" id="coin-input" placeholder="Enter number of coins">
+      <p>Cost: $<span id="calculated-cost">0.00</span></p>
+    </section>
+
+    <!-- Purchase History -->
+    <section class="purchase-history">
+      <h2>Purchase History</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Transaction ID</th>
+            <th>Coins</th>
+            <th>Status</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="purchase-history">
+          <!-- History will be dynamically loaded -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script type="module" src="/public/js_file/premium.js"></script>
+</body>
+</html>
