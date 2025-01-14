@@ -51,7 +51,7 @@ const countdownInterval = setInterval(() => {
     logEvent(analytics, "flash_screen_completed", { page: "Registration" });
 
     flashScreen.style.display = "none";
-    window.location.href = "./html/userRegistulation.html"; // Redirect to registration
+    window.location.href = "/html/userRegistulation.html"; // Redirect to registration
   }
 }, 2500);
 
